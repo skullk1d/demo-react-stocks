@@ -1,0 +1,89 @@
+.TickerSearch {
+	margin: 25px auto 12px;
+}
+
+.TickerSearch .tickerInput {
+	margin: 0 auto 40px;
+	padding: 10px;
+	font-size: 24px;
+	border: 2px #ccc solid;
+	background-color: #F1F1F1;
+	/*box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);*/
+	color: #ADADAD;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	display: block;
+}
+
+.TickerSearch input::-webkit-input-placeholder {
+	color: #ccc;
+}
+
+.TickerSearch .streamingContainer {
+	color: #eee;
+	font-size: 16px;
+	font-weight: lighter;
+	text-shadow: 1px 1px 6px rgba(0,0,0, .5);
+	border-radius: 17px;
+	background-color: rgba(0,0,0, 0.75); /*rgba(46, 119, 148, 0.75);*/
+	padding: 8px;
+	display: inline-block;
+	box-shadow: 2px 2px 3px rgba(0,0,0, 0.5);
+}
+.TickerSearch .streamingContainer.isStreaming {
+	color: #BA6F80;
+}
+.TickerSearch .streamingContainer:active,
+.TickerSearch .streamingContainer.active,
+.TickerSearch .streamingContainer.disabled {
+	box-shadow: none;
+	-webkit-transform: translate(1px,1px);
+	transform: translate(1px,1px);
+}
+.TickerSearch .streamingContainer.disabled {
+	color: #bbb;
+}
+
+.TickerSearch .streamingCheckbox {
+	vertical-align: middle;
+}
+
+.TickerSearch .streamingContainer label {
+	vertical-align: middle;
+}
+
+.TickerSearch .errorBox {
+	opacity: 0;
+	-webkit-transform: translateY(-60px);
+	transform: translateY(-60px);
+	padding: 6px;
+	color: #FF0000;
+	font-weight: bold;
+	position: absolute;
+	width: 100%;
+	z-index: 0;
+	font-weight: lighter;
+	text-shadow: 1px 1px 6px rgba(0,0,0, .5);
+	font-size: 14px;
+}
+.TickerSearch .errorBox .symbol {
+	font-weight: bold;
+}
+
+.TickerSearch .errorBox.show {
+	opacity: 1;
+	-webkit-transform: translateY(-40px);
+	transform: translateY(-40px);
+}
+
+/* PHONE PORTRAIT */
+@media only screen and (max-width: 639px) {
+	.TickerSearch {
+		margin:	20px auto;
+	}
+	.TickerSearch .tickerInput {
+		font-size: 20px;
+		padding: 8px;
+	}
+}

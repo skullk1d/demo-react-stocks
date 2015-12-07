@@ -1,10 +1,3 @@
-module.exports.UPDATE_TICKER = function (symbol) {
-	return {
-		type: 'UPDATE_TICKER',
-		tickertickerSymbol: symbol
-	}; // action object
-};
-
 module.exports.FETCH_QUOTE_REQUEST = function (symbol) {
 	return {
 		type: 'FETCH_QUOTE_REQUEST',

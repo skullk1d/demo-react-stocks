@@ -19,7 +19,7 @@ var Menu = React.createClass({
 			<div className='Menu'>
 				<Background />
 				<div className='wrapper'>
-					<Clock timezone='America/New_York' />
+					<Clock timezone='America/New_York' placeStr='New York' />
 					<h3 className='title'>Get Stock Quotes.</h3>
 					<p className='subtitle'>Powered by Yahoo Finance, React, &amp; Redux</p>
 					<TickerSearch

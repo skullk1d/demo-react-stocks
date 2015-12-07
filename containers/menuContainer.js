@@ -4,11 +4,10 @@ var ReactRedux = require('react-redux');
 var connect = ReactRedux.connect;
 
 // action creators (including dispatched via redux middleware)
-/*var updateTicker = require('../actions/actions').UPDATE_TICKER;*/
 var requestQuote = require('../components/requestQuote');
 var setStreaming = require('../actions/actions').TOGGLE_STREAMING;
 
-// Which part of the Redux global state does our component want to receive as props?
+// which part of the Redux global state does our component want to receive as props?
 function mapStateToProps(state) {
 	return {
 		tickerSymbol: state.tickerSymbol,
@@ -20,7 +19,7 @@ function mapStateToProps(state) {
 	};
 }
 
-// Which action creators does it want to receive by props?
+// which action creators does it want to receive by props?
 function mapDispatchToProps(dispatch) {
 	return {
 		requestQuote: function (symbol) {

@@ -14,7 +14,7 @@ var createStoreWithMiddleware = applyMiddleware(
 )(createStore);
 var store = createStoreWithMiddleware(stocksApp);
 
-// Render the menu component on the page, and pass an array with menu options
+// Render the provider and container components onto the toplevel 'app' element
 React.render((
   <Provider store={store}>
     { function () {

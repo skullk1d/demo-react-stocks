@@ -4,14 +4,6 @@ var update = require('react/addons').addons.update;
 // better to pass in only the part of state we manage here instead of entire state,
 // in this case tickerSymbol
 // don't do anything here that clashes with the state model
-module.exports.UPDATE_TICKER = function (state, action) {
-	var newState = update(state, {
-		tickerSymbol: { $set: action.tickerSymbol || '' }
-	});
-
-	return newState;
-}; // perhaps no longer needed as requests already update ticker
-
 module.exports.FETCH_QUOTE_REQUEST = function (state, action) {
 	var newState = update(state, {
 		tickerSymbol: { $set: action.tickerSymbol || '' },

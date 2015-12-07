@@ -29,7 +29,7 @@ var Clock = React.createClass({
 	},
 	render: function() {
 		return (
-			<div className='clock'>{'Time in New York: ' + this.state.timeNowFormatted}</div>
+			<div className='clock'>{'Time in ' + this.props.placeStr + ': ' + this.state.timeNowFormatted}</div>
 		);
 	}
 });

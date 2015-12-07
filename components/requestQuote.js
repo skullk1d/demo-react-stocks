@@ -2,7 +2,6 @@ var actions = require('../actions/actions');
 var fetchQuoteRequest = actions.FETCH_QUOTE_REQUEST;
 var fetchQuoteSuccess = actions.FETCH_QUOTE_SUCCESS;
 var fetchQuoteFail = actions.FETCH_QUOTE_FAIL;
-var toggleStreaming = actions.TOGGLE_STREAMING;
 
 function getJSONP(url, success) {
 
@@ -22,7 +21,7 @@ function getJSONP(url, success) {
 }
 
 function doRequest(symbol, callback) {
-	// this is the lovely YQL query (html encoded) which lets us get the stock price:
+	// this is the YQL query (html encoded) which lets us get the stock price:
 	// select * from html where url="http://finance.yahoo.com/q?s=goog" and xpath='//span[@id="yfs_l10_goog"]'
 	symbol = symbol || ''; // 'YHOO';
 	var url = 'http://query.yahooapis.com/v1/public/yql';
